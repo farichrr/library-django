@@ -1,0 +1,6 @@
+/gitignore
+models.py
+.idea
+*.pyc
+*.swp
+*.env
