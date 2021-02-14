@@ -10,9 +10,12 @@ from django.db import models
 
 class Book(models.Model):
     book_id = models.UUIDField(primary_key=True)
-    author = models.TextField(blank=True, null=True)  # This field type is a guess.
+    author = models.CharField(max_length=100, blank=True, null=True)
     publication = models.DateField(blank=True, null=True)
-    price = models.TextField(blank=True, null=True)  # This field type is a guess.
+    price = models.IntegerField(blank=True, null=True)
+    title = models.CharField(max_length=100, blank=True, null=True)
+    isbn = models.CharField(max_length=40, blank=True, null=True)
+    created_at = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         managed = False

@@ -11,3 +11,10 @@ class BookForm(forms.ModelForm):
             'price',
             'isbn',
         ]
+        labels = {
+            'author':'Author    ',
+            'publication':'Pub Date',
+            'title':'Book Title',
+            'price':'Price',
+            'isbn':'ISBN',
+        }

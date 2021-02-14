@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #3rd party
+    'crispy_forms',
 
     #local
-    'book'
+    'book',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
