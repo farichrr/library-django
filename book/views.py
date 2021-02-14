@@ -24,4 +24,12 @@ def Test(request):
     html_template = loader.get_template('index.html')
     return HttpResponse(html_template.render(context, request))
 
-# def AddBook(request):
+def AddBook(request):
+    if request.method == 'POST':
+	form = BookForm(request.POST)
+	if form.is_valid():
+	    form.save()
+	    return redirect('/')
+    return render(request, 'viewbook.html', {
+	'form': BookForm(),
+    })
